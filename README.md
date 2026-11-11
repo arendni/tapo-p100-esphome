@@ -2,7 +2,7 @@
 
 This Repo is a documentation for flashing the esphome firmware on [TP Link/Tapo P100 smart plug (EU)](https://www.tapo.com/de/product/tapo-p100-smart-plug/v1/1-pack)
 
-## ⚠️ Safety Warning / Sicherheitshinweis
+## ⚠️ Safety Warning
 
 > [!WARNING]
 > **DANGER: ELECTRIC SHOCK AND FIRE HAZARD**
