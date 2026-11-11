@@ -48,9 +48,12 @@ The following steps are taken inside the [ESPHome Integration in HomeAssistant](
 
 1. Go to the ESPHome Dashboard and click on "New Device", choose the "empty configuration" option.
 2. Paste the content of the [tapo-p100-esphome.yaml](tapo-p100-esphome.yaml) inside the config field and **make sure to edit the Friendly Name, id and WiFi-credentials**
-3. click on "save" and the device will appear in the device list.
-4. Inside the device Manu, click on "install" and choose the option "manual download".
-5. Chose the option "UF2 package" and the file will be downloaded.
+   
+   ***NOTE: Also See the [ESPHome Page for TP100 (EU) Device](https://devices.esphome.io/devices/tp-link-tapo-p100eu/?utm_source=chatgpt.com) for more informations**
+
+4. click on "save" and the device will appear in the device list.
+5. Inside the device Manu, click on "install" and choose the option "manual download".
+6. Chose the option "UF2 package" and the file will be downloaded.
 
 ## Save the default firmware
 
