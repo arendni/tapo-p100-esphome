@@ -37,9 +37,9 @@ The following steps are taken inside the [ESPHome Integration in HomeAssistant](
 4. Inside the device Manu, click on "install" and choose the option "manual download".
 5. Chose the option "UF2 package" and the file will be downloaded.
 
-## Flash config on P100 plug
+## Save the default firmware
 
-Now you can flash the downloaded UF2 file.
+It's recommended to dump the default firmware from the P100 to your Computer
 
 1. plug in the UART to USB tool with the P100 attached to it (double check the correct wiring and make sure GPIO0 is connected to 3V3).
 2. open a terminal and find your USB Device
@@ -50,11 +50,23 @@ Now you can flash the downloaded UF2 file.
 	```bash
 	/dev/tty.usbserial-XXXXXXXX
 	```
-3. Start the flashing process with the path to your UF2-file:
+3. dump the original firmware:
+	```bash
+	ltchiptool flash read rtl8720c tapo-p100-original.bin -d /dev/tty.usbserial-XXXXXXXX
+	```
+
+
+## Flash config on P100 plug
+
+Now you can flash the downloaded UF2 file.
+
+1. plug in the UART to USB tool with the P100 attached to it (double check the correct wiring and make sure GPIO0 is connected to 3V3).
+
+2. Start the flashing process with the path to your UF2-file:
 	```bash
 	ltchiptool flash write your_downloaded_esphome_file.uf2 -d /dev/tty.usbserial-XXXXXXXX
 	```
-4. You can see the flashing progress. Once it has finished your terminal should show:
+3. You can see the flashing progress. Once it has finished your terminal should show:
 	```bash
 	Booting firmware  [################################################################]  100%
 
