@@ -1,3 +1,5 @@
+**Please read the safety notes in [README](../README.md) before starting with the manual below!**
+
 ## Prerequisite
 
 1. Install ltchiptool
@@ -16,16 +18,27 @@
 	```
 2. Disassemble the P100 Case by using some plectrums or other flat items. This can be vary hard an annoying because the plastic clips are very tight. Starting from the "bottom side" of the plug seems to work.
 **NOTE: Do not use too much force. That will break the clips and the housing my be too loose which is a potential safety risk because of the 220V inside the plug.**
+
+	![p100_1](images/IMG_6721.HEIC)
+
+	![p100_2](images/IMG_6722.HEIC)
+
+	![p100_3](images/IMG_6723.HEIC)
+
 4. Connect an USB to UART tool to the Pins of the Tapo P100 Pads:
 
 	**NOTE: If your USB to UART tool supports multiple voltages, make sure to use 3.3V, otherwise you could damage the 				P100 plug!**
 
-	UART <-> P100
-	GND <-> GND
-	TX <-> RX
-	RX <-> TX
-	3V3 <-> V33
-	3V3 <-> GPIO0 (to activate Download mode)
+	<p>UART <-> P100<br>
+	GND <-> GND<br>
+	TX <-> RX<br>
+	RX <-> TX<br>
+	3V3 <-> V33<br>
+	3V3 <-> GPIO0 (to activate Download mode)</p>
+
+	![p100_4](images/IMG_6724.HEIC)
+
+	![p100_5](images/IMG_6726.HEIC)
 
 ## Preparing ESPHome config
 
