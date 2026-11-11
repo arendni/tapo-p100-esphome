@@ -18,7 +18,8 @@
 	ltchiptool --help
 	```
 2. Disassemble the P100 Case by using some plectrums or other flat items. This can be vary hard an annoying because the plastic clips are very tight. Starting from the "bottom side" of the plug seems to work.
-**NOTE: Do not use too much force. That will break the clips and the housing my be too loose which is a potential safety risk because of the 220V inside the plug.**
+	
+	**NOTE: Do not use too much force. That will break the clips and the housing my be too loose which is a potential safety risk because of the 220V inside the plug.**
 
 	![p100_1](images/IMG_6721.HEIC)
 
@@ -30,7 +31,7 @@
 
 	**NOTE: If your USB to UART tool supports multiple voltages, make sure to use 3.3V, otherwise you could damage the 				P100 plug!**
 
-	<p>UART <-> P100<br>
+	<p>UART <-> P100<br><br>
 	GND <-> GND<br>
 	TX <-> RX<br>
 	RX <-> TX<br>
@@ -46,7 +47,7 @@
 The following steps are taken inside the [ESPHome Integration in HomeAssistant](https://www.home-assistant.io/integrations/esphome/). Other ESPHome Installations should also work but the steps to create the config may vary.
 
 1. Go to the ESPHome Dashboard and click on "New Device", choose the "empty configuration" option.
-2. Paste the content of the [tapo-p100-esphome.yaml](/esphome/tapo-p100-esphome.yaml) inside the config field and **make sure to edit the Friendly Name, id and WiFi-credentials**
+2. Paste the content of the [tapo-p100-esphome.yaml](tapo-p100-esphome.yaml) inside the config field and **make sure to edit the Friendly Name, id and WiFi-credentials**
 3. click on "save" and the device will appear in the device list.
 4. Inside the device Manu, click on "install" and choose the option "manual download".
 5. Chose the option "UF2 package" and the file will be downloaded.
@@ -55,7 +56,7 @@ The following steps are taken inside the [ESPHome Integration in HomeAssistant](
 
 It's recommended to dump the default firmware from the P100 to your Computer
 
-1. plug in the UART to USB tool with the P100 attached to it (double check the correct wiring and make sure GPIO0 is connected to 3V3).
+1. plug in the UART to USB tool with the P100 attached to it **(double check the correct wiring and make sure GPIO0 is connected to 3V3)**.
 2. open a terminal and find your USB Device
 	```bash
 	ls /dev/tty.usb*
