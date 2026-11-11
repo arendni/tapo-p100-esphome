@@ -1,0 +1,54 @@
+esphome:
+  name: tapo-p100
+  friendly_name: Tapo P100 Smart plug
+
+rtl87xx:
+  board: generic-rtl8720cf-2mb-992k
+
+logger:
+
+api:
+
+ota:
+  - platform: esphome
+
+wifi:
+  ssid: YOUR_WIFI_SSID
+  password: YOUR_WIFI_PASSWORD
+
+captive_portal:
+
+output:
+  - platform: gpio
+    id: relay_output
+    pin: PA8
+
+  - platform: gpio
+    id: led_orange
+    pin: PA9
+
+  - platform: gpio
+    id: led_green
+    pin: PA10
+
+switch:
+  - platform: output
+    name: Relay
+    id: relay
+    output: relay_output
+    restore_mode: RESTORE_DEFAULT_OFF
+    on_turn_on:
+      - output.turn_off: led_orange
+      - output.turn_on: led_green
+    on_turn_off:
+      - output.turn_off: led_green
+      - output.turn_off: led_orange
+
+binary_sensor:
+  - platform: gpio
+    name: Button
+    pin:
+      number: PA17
+      inverted: true
+    on_press:
+      - switch.toggle: relay
