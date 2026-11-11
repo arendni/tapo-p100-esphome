@@ -1,6 +1,6 @@
 # tapo-p100-esphome
 
-install esphome firmware on TP Link/Tapo P100 smart plug
+This Repo is a documentation for flashing the esphome firmware on [TP Link/Tapo P100 smart plug](https://www.tapo.com/de/product/tapo-p100-smart-plug/v1/1-pack)
 
 ## ⚠️ Safety Warning / Sicherheitshinweis
 
