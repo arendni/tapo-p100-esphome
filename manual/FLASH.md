@@ -1,4 +1,5 @@
-**Please read the safety notes in [README](../README.md) before starting with the manual below!**
+>[!WARNING]
+>**Please read the safety notes in [README](../README.md) before starting with the manual below!**
 
 ## Prerequisite
 
