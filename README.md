@@ -1,29 +1,34 @@
 # tapo-p100-esphome
+
 install esphome firmware on TP Link/Tapo P100 smart plug
 
-## Prerequisite
+## ⚠️ Safety Warning / Sicherheitshinweis
 
-1. Install ltchiptool
+> [!WARNING]
+> **DANGER: ELECTRIC SHOCK AND FIRE HAZARD**
+> 
+> This project involves modifying a mains-powered electrical device (230 V AC). Improper handling can result in severe injury, death, fire, or property damage.
 
-	```bash
-	python3 -m venv ~/ltchiptool-venv
-	source ~/ltchiptool-venv/bin/activate
-	pip install --upgrade pip
-	pip install ltchiptool
-	```
+### Safety Instructions
 
-	**NOTE: For further help simply run:**
+-   **NEVER connect the device to mains power while the enclosure is open or removed.**
+    
+-   Always disconnect the device completely from mains power before opening it.
+    
+-   Internal capacitors may retain dangerous voltages even after the device has been unplugged.
+    
+-   Use only a suitable, electrically isolated low-voltage power supply for flashing, after verifying the required voltage and pinout.
+    
+-   Never reconnect the device to mains power unless it is fully reassembled, undamaged, and electrically safe.
+    
+-   Modifying the device may invalidate its warranty, safety certification, or conformity assessment.
+- 
+### Disclaimer
 
-	```bash
-	ltchiptool --help
-	```
-2. Connect an USB to UART tool to the Pins of the Tapo P100 Pads:
+This is an independent, experimental, community-maintained project and is not affiliated with or endorsed by TP-Link.
 
-	UART <-> P100
-	GND <-> GND
-	TX <-> RX
-	RX <-> TX
-	3V3 <-> VCC
-	3V3 <-> PA00 (to activate Download mode)
+All information, firmware configurations, and instructions are provided **"AS IS"**, without warranty of any kind, to the extent permitted by applicable law.
 
-3. 
+The authors do not guarantee the safety, correctness, or suitability of the instructions for any particular hardware revision. Modifications are undertaken at the user's own risk.
+
+Nothing in this disclaimer excludes or limits liability where such exclusion or limitation is prohibited by applicable law.
